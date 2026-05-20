@@ -4,6 +4,11 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import uvicorn
+from dotenv import load_dotenv
+import os
+
+# 加载环境变量
+load_dotenv()
 
 from config import settings
 from models import (

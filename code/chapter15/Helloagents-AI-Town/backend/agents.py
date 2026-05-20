@@ -91,7 +91,20 @@ class NPCAgentManager:
         print("🤖 正在初始化NPC Agent系统...")
 
         try:
-            self.llm = HelloAgentsLLM()
+            # 从环境变量读取配置
+            provider = os.getenv("LLM_PROVIDER", "deepseek")
+            model_id = os.getenv("LLM_MODEL_ID", "deepseek-v4-flash")
+            api_key = os.getenv("LLM_API_KEY")
+            base_url = os.getenv("LLM_BASE_URL", "https://api.deepseek.com/v1")
+            
+            print(f"🔧 初始化LLM: provider={provider}, model={model_id}, base_url={base_url}")
+            
+            self.llm = HelloAgentsLLM(
+                provider=provider,
+                model=model_id,
+                api_key=api_key,
+                base_url=base_url
+            )
             print("✅ LLM初始化成功")
         except Exception as e:
             print(f"❌ LLM初始化失败: {e}")
