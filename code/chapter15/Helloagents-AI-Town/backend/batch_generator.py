@@ -21,9 +21,18 @@ class NPCBatchGenerator:
     def __init__(self):
         """初始化批量生成器"""
         print("🎨 正在初始化批量对话生成器...")
+        provider = os.getenv("LLM_PROVIDER", "deepseek")
+        model_id = os.getenv("LLM_MODEL_ID", "deepseek-v4-flash")
+        api_key = os.getenv("LLM_API_KEY")
+        base_url = os.getenv("LLM_BASE_URL", "https://api.deepseek.com/v1")
         
         try:
-            self.llm = HelloAgentsLLM()
+            self.llm = HelloAgentsLLM(
+                provider=provider,
+                model_id=model_id,
+                api_key=api_key,
+                base_url=base_url
+            )
             self.enabled = True
             print("✅ 批量生成器初始化成功")
         except Exception as e:
