@@ -2,6 +2,9 @@
 
 import sys
 import os
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # 添加HelloAgents到Python路径
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'HelloAgents'))
