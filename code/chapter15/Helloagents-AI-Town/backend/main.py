@@ -10,6 +10,11 @@ import os
 # 加载环境变量
 load_dotenv()
 
+# 确保本地服务不经过HTTP代理
+for _key in ("no_proxy", "NO_PROXY"):
+    if not os.environ.get(_key):
+        os.environ[_key] = "localhost,127.0.0.1,.local"
+
 from config import settings
 from models import (
     ChatRequest, ChatResponse, 
