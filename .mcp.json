@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "project-db": {
+      "command": "uvx",
+      "args": ["--from", "mcp-server-sqlite", "mcp-server-sqlite", "--db-path", "/Users/sunwenfei/Desktop/workspace/hello-agents/data/app.db"]
+    }
+  }
+}

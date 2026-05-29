@@ -167,3 +167,12 @@ test_*.py
 !test_tools.py
 .workbuddy/
 memory/
+data/
+.trae/
+.claude/
+.vscode/
+hello-world-video/
+growth-video/
+dashboard/
+.frontend-slides/
+
