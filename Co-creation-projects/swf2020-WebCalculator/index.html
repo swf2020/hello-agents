@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALC // NEON</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div class="page-title">高能计算器</div>
+  <div class="bg-grid"></div>
+  <div class="bg-orb bg-orb--left"></div>
+  <div class="bg-orb bg-orb--right"></div>
+
+  <div class="calculator">
+    <div class="calc-header">
+      <span class="calc-dot calc-dot--red"></span>
+      <span class="calc-dot calc-dot--yellow"></span>
+      <span class="calc-dot calc-dot--green"></span>
+      <span class="calc-brand">NEON</span>
+    </div>
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button class="btn fn" data-key="C">C</button>
+      <button class="btn fn" data-key="DEL">⌫</button>
+      <button class="btn op" data-key="/">÷</button>
+      <button class="btn op" data-key="*">×</button>
+
+      <button class="btn num" data-key="7">7</button>
+      <button class="btn num" data-key="8">8</button>
+      <button class="btn num" data-key="9">9</button>
+      <button class="btn op" data-key="-">−</button>
+
+      <button class="btn num" data-key="4">4</button>
+      <button class="btn num" data-key="5">5</button>
+      <button class="btn num" data-key="6">6</button>
+      <button class="btn op" data-key="+">+</button>
+
+      <button class="btn num" data-key="1">1</button>
+      <button class="btn num" data-key="2">2</button>
+      <button class="btn num" data-key="3">3</button>
+      <button class="btn eq" data-key="=">=</button>
+
+      <button class="btn num zero" data-key="0">0</button>
+      <button class="btn num" data-key=".">.</button>
+    </div>
+  </div>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

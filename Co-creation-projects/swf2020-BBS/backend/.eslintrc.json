@@ -1,0 +1,9 @@
+{
+  "env": { "node": true, "jest": true, "es2024": true },
+  "extends": "eslint:recommended",
+  "parserOptions": { "ecmaVersion": 2024 },
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": "off"
+  }
+}

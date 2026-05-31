@@ -1,0 +1,10 @@
+{
+  "env": { "browser": true, "es2024": true },
+  "extends": "eslint:recommended",
+  "parserOptions": { "ecmaVersion": 2024, "sourceType": "module", "ecmaFeatures": { "jsx": true } },
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "react/prop-types": "off"
+  }
+}
